@@ -1,0 +1,37 @@
+#include <iostream>
+#include <thread>
+#include <chrono>
+
+using namespace std;
+
+void prepFood() {
+    for (int i = 1; i <= 5; i++) {
+        cout << "Preparing Food " << i << endl;
+        this_thread::sleep_for(chrono::milliseconds(400));
+    }
+}
+
+void decorateVenue() {
+    for (int i = 1; i <= 5; i++ ) {
+        cout << "Decorating Venue " << i << endl;
+        this_thread::sleep_for(chrono::milliseconds(400));
+    }
+}
+
+void monitorProgress() {
+    for (int i = 1; i <= 7; i++ ) {
+        cout << "Checking Program...\n";
+        this_thread::sleep_for(chrono::milliseconds(300));
+    }
+}
+
+int main() {
+    thread t1(prepFood);
+    thread t2(decorateVenue);
+    monitorProgress(); 
+    t1.join();
+    t2.join();
+    return 0;
+}
+
+
