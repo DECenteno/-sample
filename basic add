@@ -13,3 +13,32 @@ cout << num1 << "+" << num2 << "=" << sum << endl;
 return 0;
 
 }
+
+
+
++++++++++++++++++++++++++++
+
+#include<iostream>
+
+using namespace std;
+
+int main() {
+int num1, num2;
+cout << "Welcome to Simple Calculator" << endl;
+cout << "Enter 2 numbers: ";
+cin >> num1 >> num2;
+
+int sum = num1+num2;
+cout << num1 << "+" << num2 << "=" << sum << endl;
+
+int diff = num1-num2;
+cout << num1 << "-" << num2 << "=" << diff << endl;
+
+int modulo = num1%num2;
+cout << num1 << "%" << num2 << "=" <<modulo << endl;
+
+int product = num1 * num2;
+cout << num1 << "*" << num2 << "=" << product << endl;
+
+return 0;
+}
